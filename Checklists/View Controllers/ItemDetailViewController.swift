@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import UserNotifications
 protocol ItemDetailViewControllerDelegate: class {
   func itemDetailViewControllerDidCancel(_ controller: ItemDetailViewController)
   func itemDetailViewController(
@@ -16,13 +16,26 @@ protocol ItemDetailViewControllerDelegate: class {
   )
   func itemDetailViewController(
     _ controller: ItemDetailViewController,
-    didFinishEditing item: ChecklistItem
-  )
+    didFinishEditing item: ChecklistItem)
+    
+  
 }
 
 class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
 	@IBOutlet weak var textField: UITextField!
 	@IBOutlet weak var doneBarButton: UIBarButtonItem!
+  @IBOutlet weak var shouldRemindSwitch: UISwitch!
+  @IBOutlet weak var datePicker: UIDatePicker!
+  @IBAction func shouldRemindToggled(_ switchControl: UISwitch){
+    textField.resignFirstResponder()
+    
+    if switchControl.isOn{
+      let center = UNUserNotificationCenter.current()
+      center.requestAuthorization(options: [.alert, .sound]) {_, _ in
+        //do Nothing
+      }
+    }
+  }
   weak var delegate: ItemDetailViewControllerDelegate?
   var itemToEdit: ChecklistItem?
 
@@ -33,6 +46,8 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
       title = "Edit Item"
       textField.text = item.text
       doneBarButton.isEnabled = true
+      shouldRemindSwitch.isOn = item.shouldRemind
+      datePicker.date = item.dueDate
     }
   }
 
@@ -49,12 +64,20 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   @IBAction func done() {
     if let item = itemToEdit {
       item.text = textField.text!
+      item.shouldRemind = shouldRemindSwitch.isOn
+      item.dueDate = datePicker.date
+      item.scheduleNotification()
       delegate?.itemDetailViewController(self, didFinishEditing: item)
     } else {
       let item = ChecklistItem()
       item.text = textField.text!
+      item.checked = false
+      item.shouldRemind = shouldRemindSwitch.isOn
+      item.dueDate = datePicker.date
+      item.scheduleNotification()
       delegate?.itemDetailViewController(self, didFinishAdding: item)
     }
+   
   }
 
   // MARK: - Table View Delegates

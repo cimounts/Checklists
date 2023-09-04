@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B8EA08C2AA66B110064D55D /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8EA08B2AA66B110064D55D /* IconPickerViewController.swift */; };
 		DD0680CF24DB4B150099082F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0680CE24DB4B150099082F /* DataModel.swift */; };
 		DD1E564424DA000700A230C5 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E564324DA000700A230C5 /* Checklist.swift */; };
 		DD1E564624DA0A0100A230C5 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E564524DA0A0100A230C5 /* ListDetailViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B8EA08B2AA66B110064D55D /* IconPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerViewController.swift; sourceTree = "<group>"; };
 		DD0680CE24DB4B150099082F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		DD1E564324DA000700A230C5 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		DD1E564524DA0A0100A230C5 /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
@@ -74,8 +76,8 @@
 				DDB561CA24DC39640062E5C5 /* Data Models */,
 				DDB561CB24DC396F0062E5C5 /* View Controllers */,
 				DDB561CC24DC39790062E5C5 /* Resources */,
-				DD80A0A124D1EF4D00CF4598 /* Info.plist */,
 				DD80A09324D1EF4C00CF4598 /* AppDelegate.swift */,
+				DD80A0A124D1EF4D00CF4598 /* Info.plist */,
 				DD80A09524D1EF4C00CF4598 /* SceneDelegate.swift */,
 			);
 			path = Checklists;
@@ -94,10 +96,11 @@
 		DDB561CB24DC396F0062E5C5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD506DD824D9E6060073E161 /* AllListsViewController.swift */,
 				DD80A09724D1EF4C00CF4598 /* ChecklistViewController.swift */,
+				DD506DD824D9E6060073E161 /* AllListsViewController.swift */,
 				DD5E8BC524D5BC3000A763EE /* ItemDetailViewController.swift */,
 				DD1E564524DA0A0100A230C5 /* ListDetailViewController.swift */,
+				6B8EA08B2AA66B110064D55D /* IconPickerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				DD5E8BC624D5BC3000A763EE /* ItemDetailViewController.swift in Sources */,
 				DD80A09824D1EF4C00CF4598 /* ChecklistViewController.swift in Sources */,
 				DD506DD924D9E6060073E161 /* AllListsViewController.swift in Sources */,
+				6B8EA08C2AA66B110064D55D /* IconPickerViewController.swift in Sources */,
 				DD80A09424D1EF4C00CF4598 /* AppDelegate.swift in Sources */,
 				DD80A09624D1EF4C00CF4598 /* SceneDelegate.swift in Sources */,
 				DDE1D9E524D35609006A4FB6 /* ChecklistItem.swift in Sources */,
@@ -361,12 +365,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R9YHXVKD9G;
 				INFOPLIST_FILE = Checklists/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Checklists;
+				PRODUCT_BUNDLE_IDENTIFIER = christian.Checklists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -379,12 +384,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R9YHXVKD9G;
 				INFOPLIST_FILE = Checklists/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Checklists;
+				PRODUCT_BUNDLE_IDENTIFIER = christian.Checklists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
