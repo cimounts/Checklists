@@ -302,6 +302,7 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f9y-qY-uyp">
                                                     <rect key="frame" x="295" y="6" width="51" height="31.5"/>
+                                                    <color key="tintColor" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
                                                         <action selector="shouldRemindToggled:" destination="nO0-z9-W1E" eventType="valueChanged" id="fp0-9I-nmZ"/>
                                                     </connections>
